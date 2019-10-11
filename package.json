@@ -1,0 +1,38 @@
+{
+  "name": "melodicalmakes",
+  "version": "1.0.0",
+  "description": "A 2D CAD designer that interfaces through musical composition devices",
+  "main": "dist/backend/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommymchugh/MelodicalMakes.git"
+  },
+  "scripts": {
+    "start": "APP_DEV=true npx electron ."
+  },
+  "keywords": [
+    "cad",
+    "makerspace",
+    "inclusive",
+    "music"
+  ],
+  "author": "Thomas McHugh & Abir Saha",
+  "bugs": {
+    "url": "https://github.com/tommymchugh/MelodicalMakes/issues"
+  },
+  "homepage": "https://github.com/tommymchugh/MelodicalMakes#readme",
+  "devDependencies": {
+    "@types/webmidi": "^2.0.3",
+    "del": "^5.1.0",
+    "electron": "^6.0.12",
+    "electron-reload": "^1.5.0",
+    "gulp": "^4.0.2",
+    "gulp-exec": "^4.0.0",
+    "gulp-tslint": "^8.1.4",
+    "gulp-typescript": "^5.0.1",
+    "gulp-watch": "^5.0.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,7 @@
+{
+    "rootDir": "src",
+    "compilerOptions": {
+        "outDir": "dist",
+        "target": "es6"
+    }
+}
