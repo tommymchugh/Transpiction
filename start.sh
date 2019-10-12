@@ -1,4 +1,4 @@
 #! /bin/bash
-gulp build
+npx gulp build
 (osascript vmpk/start_script.scpt && npm start) &
-gulp liveReload
+npx gulp liveReload

@@ -111,7 +111,7 @@ export class Allegro {
                     for (var i = 0; i < this.activeNotes.length; i++) {
                         const activeNote = this.activeNotes[i];
                         if (activeNote.rawValue === note.rawValue) {
-                            noteLength = DateDiff(activeNote.dateTimeCreated, note.dateTimeCreated, TimeType.millisecond);
+                            noteLength = DateDiff(activeNote.dateTimeCreated, note.dateTimeCreated, TimeType.second);
                             this.activeNotes.splice(i, 1);
                             break;
                         }
