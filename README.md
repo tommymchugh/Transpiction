@@ -1,6 +1,6 @@
 ## MelodicalMakes
 __By Tommy McHugh & Abir Saha__  
-A 2D CAD designer that interfaces with natural music composition devices.
+A Music to Visual Art Composition Tool.
   
 *Created For CS 397/LS 351: Inclusive Making*
 ***

@@ -1,0 +1,21 @@
+{
+  "gratitude":  "joy",
+  "happiness": "joy",
+  "humility":  "joy",
+  "love":  "joy",
+  "optimism":  "anticipation",
+  "trust": "trust",
+  "anger":  "anger",
+  "arrogance":  "disgust",
+  "disgust":  "disgust",
+  "fear":  "fear",
+  "pessimism": "disgust",
+  "regret":  "sadness",
+  "sadness":  "sadness",
+  "shame":  "disgust",
+  "agreeableness":  "trust",
+  "anticipation":  "anticipation",
+  "disagreeableness":  "disgust",
+  "surprise":  "surprise",
+  "shyness": "fear"
+}

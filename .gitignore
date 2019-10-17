@@ -5,7 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-
+*.pt
 dist
 
 # Byte-compiled / optimized / DLL files
@@ -106,6 +106,12 @@ celerybeat-schedule
 
 # SageMath parsed files
 *.sage.py
+
+datasets/wikiart/raw_images
+
+data
+
+nohup.out
 
 # Environments
 .env

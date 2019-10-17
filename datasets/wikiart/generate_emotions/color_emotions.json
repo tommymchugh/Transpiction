@@ -1,0 +1,50 @@
+[
+    {
+        "color": "red",
+        "code": "(255, 0, 0)",
+        "emotion": "anger",
+        "type": "negative"
+    },
+    {
+        "color": "orange",
+        "code": "(255, 127, 0)",
+        "emotion": "joy",
+        "type": "positive"
+    },
+    {
+        "color": "yellow",
+        "code": "(255, 255, 0)",
+        "emotion": "fear",
+        "type": "negative"
+    },
+    {
+        "color": "green",
+        "code": "(0, 255, 0)",
+        "emotion": "trust",
+        "type": "positive"
+    },
+    {
+        "color": "blue",
+        "code": "(0, 0, 255)",
+        "emotion": "sadness",
+        "type": "negative"
+    },
+    {
+        "color": "purple",
+        "code": "(255, 0, 255)",
+        "emotion": "anticipation",
+        "type": "positive"
+    },
+    {
+        "color": "green-yellow",
+        "code": "(127, 255, 0)",
+        "emotion": "disgust",
+        "type": "negative"
+    },
+    {
+        "color": "blue-green",
+        "code": "(0, 255, 255)",
+        "emotion": "surprise",
+        "type": "positive"
+    }
+]
