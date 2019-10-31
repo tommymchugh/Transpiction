@@ -11,7 +11,7 @@ import {initSupport, TimeType, DateDiff, LowestNote, HighestNote} from "./libs/s
 export class Allegro {
     // Allegro manages the interactions between the MIDI APIs and the MIDI device
     // Define static variable types that need to be used
-    static MIDIInputName = "IAC Driver vmpk";
+    static MIDIInputName = ["IAC Driver vmpk".toLowerCase(), "v25 Out".toLowerCase()];
 
     static errors = {
         "noBrowserSuppport": "This browser does not support MIDI APIs and will not run Allegro.",
@@ -40,11 +40,11 @@ export class Allegro {
                 // Musical instruments will be included in inputs
                 const inputs = midiAccess.inputs;
                 // Determine whether a supported instrument is available
-                var midiDevice;
+                var midiDevices = [];
                 for (let input of inputs.values()) {
-                    if (input.name === Allegro.MIDIInputName) {
+                    if (Allegro.MIDIInputName.includes(input.name.toLowerCase())) {
                         // MIDI input found and is supported
-                        midiDevice = input;
+                        midiDevices.push(input);
 
                         // Set the message callback for the midi device
                         const classContext = this;
@@ -54,12 +54,11 @@ export class Allegro {
                             // Before being sent to the notePlayedCallback
                             classContext.midiMessageCallback(message, notePlayedCallback);
                         };
-                        break;
                     }
                 }
 
                 this.instance.instantiated = true;
-                if (midiDevice === undefined) {
+                if (midiDevices === undefined) {
                     // No supported devices were found to interact with allegro
                     throw new Error(Allegro.errors.noSupportedMIDIDevice);
                 } 

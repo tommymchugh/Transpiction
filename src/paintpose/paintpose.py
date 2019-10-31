@@ -7,7 +7,7 @@ from js import JoySadnessDiffs
 
 # Open the wikiart emotion map
 emotion_map_file_name = "image_emotion_maps.json"
-emotion_map_file_path = "../datasets/wikiart/generate_emotions/{}".format(emotion_map_file_name)
+emotion_map_file_path = "../../support/datasets/wikiart/generate_emotions/{}".format(emotion_map_file_name)
 
 emotion_map_file_input = open(emotion_map_file_path, "r")
 emotion_map_file_text = emotion_map_file_input.read()
@@ -19,7 +19,7 @@ emotion_map = json.loads(emotion_map_file_text)
 positive_emotions = []
 negative_emotions = []
 # Get color emotions file
-color_emotions_file_name = "../datasets/wikiart/generate_emotions/color_emotions.json"
+color_emotions_file_name = "../../support/datasets/wikiart/generate_emotions/color_emotions.json"
 color_emotions_file_input = open(color_emotions_file_name, "r")
 color_emotions_text = color_emotions_file_input.read()
 color_emotions_file_input.close()

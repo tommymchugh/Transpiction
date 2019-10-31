@@ -2,7 +2,7 @@ import json
 class Emotion:
     def __init__(self, wiki_art_emotion):
         # Get the wikiart emotions conversion object
-        emotions_conversion_file_name = "../datasets/wikiart/generate_emotions/wiki_art_emotions_conversion.json"
+        emotions_conversion_file_name = "../../support/datasets/wikiart/generate_emotions/wiki_art_emotions_conversion.json"
         emotions_conversion_file_input = open(emotions_conversion_file_name, "r")
         emotions_conversion_text = emotions_conversion_file_input.read()
         emotions_conversion_file_input.close()

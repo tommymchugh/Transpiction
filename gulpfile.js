@@ -55,14 +55,23 @@ function compileTypeScriptBackend(cb) {
     });
 }
 
+function copyTone(cb) {
+    gulp.src("node_modules/tone/build/**/*").pipe(
+        gulp.dest("dist/app/allegro/libs/tone")).on("end", () => {
+            gulp.src("node_modules/tone/build/**/*").pipe(
+                gulp.dest("src/app/allegro/libs/tone")).on("end", () => {
+                    cb();
+                });
+        });
+}
+
 function copyStatics(cb) {
     // Copy static files into the dist folder
 
     gulp.src("src/app/static/**/*").pipe(
         gulp.dest("dist/app/static")).on("end", () => {
-            cb();
+             cb();
         });
-
 }
 
 function cleanFrontend(cb) {
@@ -86,6 +95,6 @@ function startWithLiveReload(cb) {
 }
 
 exports.clean = clean;
-exports.build = series(clean, lint, compileTypeScriptBackend, compileTypeScriptFrontend, copyStatics);
+exports.build = series(clean, lint, copyTone, copyStatics, compileTypeScriptBackend, compileTypeScriptFrontend);
 exports.liveReload = startWithLiveReload;
-exports.default = series(clean, lint, compileTypeScriptBackend, compileTypeScriptFrontend, copyStatics, startWithLiveReload);
+exports.default = series(clean, lint, copyTone, copyStatics, compileTypeScriptBackend, compileTypeScriptFrontend, startWithLiveReload);

@@ -162,11 +162,11 @@ class Tofu(nn.Module):
     def train_model(self, verbose=True, save_image=(True, 20)):
         # Setup the device model, optimizer, and device type
         model, optimizer, device = self.__setup_model()
-        utils.create_dir("training_results")
+        utils.create_dir("../training_results")
 
         for batch_index, training_data in tqdm(enumerate(self.train_loader), total=len(self.dataset) // self.batch_size):
             if batch_index == 120:
-                torchvision.utils.save_image(training_data, 'training_results/sample.png')
+                torchvision.utils.save_image(training_data, '../training_results/sample.png')
                 break
         # Save an example
         # Start training model
@@ -178,8 +178,8 @@ class Tofu(nn.Module):
                 with torch.no_grad():
                     sample = torch.randn(64, self.latent_space_dims).to(device, dtype=torch.float)
                     sample = model.decode(sample).cpu()
-                    torchvision.utils.save_image(sample.view(-1, 3, 56, 56), 'training_results/sample_{}.png'.format(epoch))
+                    torchvision.utils.save_image(sample.view(-1, 3, 56, 56), '../training_results/sample_{}.png'.format(epoch))
 
             if epoch % 500 == 0:
-                torch.save(model, "model-{}.pt".format(epoch))
-        torch.save(model, "model.pt")
+                torch.save(model, "../models/model-{}.pt".format(epoch))
+        torch.save(model, "../models/model.pt")

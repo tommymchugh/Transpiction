@@ -4,12 +4,12 @@ import json
 import requests
 
 wikiart_painting_dir_name = "raw_images"
-wikiart_painting_dir_path = "../datasets/wikiart/{}".format(wikiart_painting_dir_name)
+wikiart_painting_dir_path = "../../../support/datasets/wikiart/{}".format(wikiart_painting_dir_name)
 
 wikiart_file_name = "wikiart"
-wikiart_file_path = "../datasets/wikiart/{}.json".format(wikiart_file_name)
+wikiart_file_path = "../../../support/datasets/wikiart/{}.json".format(wikiart_file_name)
 
-image_save_path = "../datasets/wikiart/{}/".format(wikiart_painting_dir_name)
+image_save_path = "../../../support/datasets/wikiart/{}/".format(wikiart_painting_dir_name)
 
 def request_image_url(image_resource):
     image_id = image_resource[0]

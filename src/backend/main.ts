@@ -1,7 +1,7 @@
 /*
  * Name: main.ts
  * Author: Tommy McHugh
- * Description: Electron application that encompasses the MelodicalMakes web app
+ * Description: Electron application that encompasses the Transpiction web app
  * Date Created: 10/11/2019
  */
 
@@ -9,6 +9,7 @@ const electron = require('electron');
 const { app, BrowserWindow, protocol } = electron;
 const path = require('path');
 const fs = require("fs");
+const { exec } = require('child_process');
 
 // Setup live reload for the dist directory
 // TODO: Disable when not in dev mode
@@ -17,7 +18,25 @@ require('electron-reload')(path.normalize(`${__dirname}/../../dist`));
 // Define the protocol that will be added
 // Give it all permissions
 const protocolValue = "resource";
+const noteInputProtocolValue = "input";
 protocol.registerSchemesAsPrivileged([{ scheme: protocolValue, privileges: { standard: true, secure: true } }])
+
+var defineNoteInputProtocol = () => {
+  const protocolLength = noteInputProtocolValue.length;
+  protocol.registerStringProtocol(noteInputProtocolValue, (request, callback) => {
+    const songTensor = request.url.substring(noteInputProtocolValue.length+3, request.url.length);
+    exec(`./sample.sh ${songTensor}`, (err, stdout, stderr) => {
+      if (err) {
+        console.log(err)
+        // node couldn't execute the command
+        return;
+      }
+      // the *entire* stdout and stderr (buffered)
+      console.log(`stdout: ${stdout}`);
+      console.log(`stderror: ${stderr}`);
+    });
+  });
+}
 
 var defineStaticProtocol = () => {
   // Create a protocol for loading static files
@@ -79,6 +98,7 @@ var createWindow = () => {
 
 var onReady = () => {
   // Code to run when electron is finished loading
+  defineNoteInputProtocol();
   defineStaticProtocol();
   createWindow();
 }

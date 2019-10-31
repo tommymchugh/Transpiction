@@ -5,7 +5,7 @@ from torchvision import datasets, transforms
 
 if __name__ == "__main__":
     # Retrieve paintpose dataset if needed
-    paintpose_path = "../datasets/wikiart"
+    paintpose_path = "../../../support/datasets/wikiart"
     use_grayscale = False
     dataset = PaintPoseDatset(paintpose_path, use_grayscale, image_shape=(56, 56))
 
