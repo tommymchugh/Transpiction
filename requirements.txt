@@ -8,5 +8,8 @@ torchvision
 numpy
 tqdm
 scikit-image
-coremltools==3.0
-onnx-coreml==1.0
+coremltools==3.0b6
+onnx-coreml==1.0b3
+tensorflow==1.15
+./support/onnx-tensorflow
+tfcoreml==1.0

@@ -3,5 +3,5 @@ target 'Transpiction' do
   use_frameworks!
 
   # Pods for Transpiction
-  pod 'LibTorch'
+  pod 'TensorFlowLiteSwift'
 end

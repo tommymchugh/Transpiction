@@ -13,7 +13,7 @@ noise = torch.randn(1, 100).to(device, dtype=torch.float)
 scripted_model = torch.jit.script(model)
 
 try:
-    os.mkdir("mobile")
+    os.mkdir("torchscript")
 except:
     pass
-scripted_model.save('mobile/tofu.zip')
+scripted_model.save('torchscript/tofu.zip')

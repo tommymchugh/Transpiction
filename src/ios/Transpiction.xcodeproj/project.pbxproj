@@ -12,8 +12,7 @@
 		0D30E3F2236A8BCA00ADC1AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D30E3F0236A8BCA00ADC1AD /* Main.storyboard */; };
 		0D30E3F4236A8BCE00ADC1AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D30E3F3236A8BCE00ADC1AD /* Assets.xcassets */; };
 		0D30E3F7236A8BCE00ADC1AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D30E3F5236A8BCE00ADC1AD /* LaunchScreen.storyboard */; };
-		0DFBA03A236A92CB001C86F1 /* TofuModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0DFBA038236A92CA001C86F1 /* TofuModel.mm */; };
-		0DFBA04B236A9B92001C86F1 /* tofu.zip in Resources */ = {isa = PBXBuildFile; fileRef = 0DFBA04A236A9B92001C86F1 /* tofu.zip */; };
+		0DFBA04E236B177F001C86F1 /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 0DFBA04D236B1715001C86F1 /* model.tflite */; };
 		FBD886024571AA2A7123441A /* Pods_Transpiction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E50EEC651091C477C4B3A0 /* Pods_Transpiction.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,10 +24,7 @@
 		0D30E3F3236A8BCE00ADC1AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D30E3F6236A8BCE00ADC1AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D30E3F8236A8BCE00ADC1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DFBA02D236A91BD001C86F1 /* Transpiction-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Transpiction-Bridging-Header.h"; sourceTree = "<group>"; };
-		0DFBA038236A92CA001C86F1 /* TofuModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TofuModel.mm; sourceTree = "<group>"; };
-		0DFBA040236A954A001C86F1 /* TofuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TofuModel.h; sourceTree = "<group>"; };
-		0DFBA04A236A9B92001C86F1 /* tofu.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = tofu.zip; path = ../../tofu/models/mobile/tofu.zip; sourceTree = "<group>"; };
+		0DFBA04D236B1715001C86F1 /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = model.tflite; path = ../../tofu/models/tensorflow/model.tflite; sourceTree = "<group>"; };
 		68E50EEC651091C477C4B3A0 /* Pods_Transpiction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transpiction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52D94F05B30E58C1F1A8828 /* Pods-Transpiction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transpiction.debug.xcconfig"; path = "Target Support Files/Pods-Transpiction/Pods-Transpiction.debug.xcconfig"; sourceTree = "<group>"; };
 		FDD2112F617806E6FEB197A6 /* Pods-Transpiction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transpiction.release.xcconfig"; path = "Target Support Files/Pods-Transpiction/Pods-Transpiction.release.xcconfig"; sourceTree = "<group>"; };
@@ -49,7 +45,6 @@
 		0D30E3E0236A8BCA00ADC1AD = {
 			isa = PBXGroup;
 			children = (
-				0DFBA02D236A91BD001C86F1 /* Transpiction-Bridging-Header.h */,
 				0D30E3EB236A8BCA00ADC1AD /* Transpiction */,
 				0D30E3EA236A8BCA00ADC1AD /* Products */,
 				1C0466D5D25EAE93AC4B20CC /* Pods */,
@@ -68,23 +63,13 @@
 		0D30E3EB236A8BCA00ADC1AD /* Transpiction */ = {
 			isa = PBXGroup;
 			children = (
-				0DFBA04A236A9B92001C86F1 /* tofu.zip */,
-				0DFBA03C236A94DB001C86F1 /* Transpiction */,
+				0DFBA04D236B1715001C86F1 /* model.tflite */,
 				0D30E3EC236A8BCA00ADC1AD /* AppDelegate.swift */,
 				0D30E3EE236A8BCA00ADC1AD /* ViewController.swift */,
 				0D30E3F0236A8BCA00ADC1AD /* Main.storyboard */,
 				0D30E3F3236A8BCE00ADC1AD /* Assets.xcassets */,
 				0D30E3F5236A8BCE00ADC1AD /* LaunchScreen.storyboard */,
 				0D30E3F8236A8BCE00ADC1AD /* Info.plist */,
-			);
-			path = Transpiction;
-			sourceTree = "<group>";
-		};
-		0DFBA03C236A94DB001C86F1 /* Transpiction */ = {
-			isa = PBXGroup;
-			children = (
-				0DFBA040236A954A001C86F1 /* TofuModel.h */,
-				0DFBA038236A92CA001C86F1 /* TofuModel.mm */,
 			);
 			path = Transpiction;
 			sourceTree = "<group>";
@@ -166,10 +151,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DFBA04E236B177F001C86F1 /* model.tflite in Resources */,
 				0D30E3F7236A8BCE00ADC1AD /* LaunchScreen.storyboard in Resources */,
 				0D30E3F4236A8BCE00ADC1AD /* Assets.xcassets in Resources */,
 				0D30E3F2236A8BCA00ADC1AD /* Main.storyboard in Resources */,
-				0DFBA04B236A9B92001C86F1 /* tofu.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +191,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D30E3EF236A8BCA00ADC1AD /* ViewController.swift in Sources */,
-				0DFBA03A236A92CB001C86F1 /* TofuModel.mm in Sources */,
 				0D30E3ED236A8BCA00ADC1AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +341,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZ44ABV766;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Transpiction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,7 +349,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.mchugh.Transpiction.Transpiction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Transpiction-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,7 +363,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LZ44ABV766;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Transpiction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -388,7 +371,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.mchugh.Transpiction.Transpiction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Transpiction-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
