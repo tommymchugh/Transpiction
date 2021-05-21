@@ -10,6 +10,6 @@ tqdm
 scikit-image
 coremltools==3.0b6
 onnx-coreml==1.0b3
-tensorflow==1.15.4
+tensorflow==2.5.0
 ./support/onnx-tensorflow
 tfcoreml==1.0
